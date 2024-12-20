@@ -1,1 +1,2 @@
-Resume Created
+Resume Created 
+updated about me
