@@ -110,3 +110,17 @@ body {
     color: white;
     font-size: 0.9rem;
 }
+.image-gallery {
+    display: flex;              /* Enables flexbox layout */
+    justify-content: center;    /* Centers the images horizontally */
+    gap: 20px;                  /* Adds space between the images */
+    flex-wrap: wrap;            /* Allows wrapping on smaller screens */
+}
+
+.project-image {
+    width: 100%;                /* Makes images responsive */
+    max-width: 400px;           /* Sets a maximum width for the images */
+    height: auto;               /* Maintains the image aspect ratio */
+    border-radius: 8px;         /* Optional: rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+}
