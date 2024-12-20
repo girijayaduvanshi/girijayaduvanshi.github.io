@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -5,19 +6,59 @@ body {
     padding: 0;
 }
 
-.header {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
+h1, h2 {
+    margin: 0;
 }
 
-.navbar {
-    background: #333;
-    color: white;
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Section */
+.header {
     display: flex;
-    justify-content: center;
-    padding: 0.5rem 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-content h1 {
+    margin-right: 20px;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.contact-details {
+    text-align: right;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
 }
 
 .navbar ul {
@@ -25,26 +66,38 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
 }
 
 .navbar ul li {
-    margin: 0 1rem;
+    margin: 0 15px;
 }
 
 .navbar ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
 }
 
-.section {
-    padding: 2rem;
-    background: #f4f4f4;
-    margin: 1rem 0;
+.navbar ul li a:hover {
+    text-decoration: underline;
 }
 
+/* Section Styles */
+.section {
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.section h2 {
+    margin-bottom: 10px;
+}
+
+/* Footer */
 .footer {
     text-align: center;
-    padding: 1rem;
-    background: #222;
-    color: white;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
 }
