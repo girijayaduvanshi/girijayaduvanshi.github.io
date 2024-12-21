@@ -107,35 +107,27 @@
         </p>
         <h3>Slooh Telescope Imaging</h3>
         <p>
-            Utilising Slooh's telescopes, I captured and processed celestial images <a href="https://app.slooh.com/profile" target="_blank">Slooh Telescope</a>, including Eta Carina and De Marian my favorite nebulas(ref pictures), to study variability in nebulae and star-forming regions. Below are examples of raw imaging:
+            Utilising Slooh's telescopes, I captured and processed celestial images, including Eta Carina and De Marian, to study variability in nebulae and star-forming regions.
         </p>
-        <!-- Gallery Preview -->
+        <div class="gallery-preview">
+            <img src="Images/Eta carina.png" alt="Eta Carina Nebula" class="gallery-thumbnail" onclick="openLightbox(); currentSlide(1)">
+            <img src="Images/De marion.png" alt="De Mairan Nebula" class="gallery-thumbnail" onclick="openLightbox(); currentSlide(2)">
+        </div>
 
-
-<!-- Lightbox Gallery -->
-<div id="lightbox" class="lightbox">
-    <span class="close" onclick="closeLightbox()">&times;</span>
-    <div class="lightbox-content">
-        <div class="lightbox-slide">
-            <img src="Images/Eta carina.png" alt="Eta Carina Nebula">
+        <!-- Lightbox Gallery -->
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <div class="lightbox-content">
+                <div class="lightbox-slide">
+                    <img src="Images/Eta carina.png" alt="Eta Carina Nebula">
+                </div>
+                <div class="lightbox-slide">
+                    <img src="Images/De marion.png" alt="De Mairan Nebula">
+                </div>
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>
-        <div class="lightbox-slide">
-            <img src="Images/m74.jpeg" alt="M74">
-        </div>
-        <div class="lightbox-slide">
-            <img src="Images/fullmoon.png" alt="Full Moon">
-        </div>
-        <div class="lightbox-slide">
-            <img src="Images/catpaw.jpg" alt="Cat's Paw Nebula">
-        </div>
-        <div class="lightbox-slide">
-            <img src="Images/De marion.png" alt="De Mairan Nebula">
-        </div>
-    </div>
-    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-    <a class="next" onclick="changeSlide(1)">&#10095;</a>
-</div>
-
 
         <h3>All Sky Camera Sensor</h3>
         <p>
