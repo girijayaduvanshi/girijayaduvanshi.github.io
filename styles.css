@@ -8,6 +8,8 @@ body {
     color: #333;
 }
 
+
+
 /* Header Section */
 .header {
     display: flex;
@@ -36,6 +38,86 @@ body {
     object-fit: cover;
     border: 3px solid #007BFF;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Banner Section */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    overflow: hidden;
+    background-color: #000; /* Fallback background color */
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Header Content Layout */
+.header-content {
+    position: absolute;
+    top: 50%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between; /* Align content to the edges */
+    align-items: center;
+    transform: translateY(-50%);
+    padding: 0 20px; /* Add padding for spacing */
+    color: white;
+}
+
+/* Contact Details on the Left */
+.contact-details {
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Shadow for readability */
+}
+
+.contact-details a {
+    color: #FFD700; /* Gold color for links */
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Information on the Right */
+.profile-info {
+    text-align: center;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.profile-info h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Adds shadow for readability */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-details {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 }
 
 /* Contact Details */
@@ -231,21 +313,4 @@ figcaption {
     .gallery-container {
         padding: 5px; /* Reduce padding on smaller devices */
     }
-}
-/* Banner Section */
-.banner {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: #000; /* Optional: Add a background color for contrast */
-}
-
-.banner-image {
-    width: 100%; /* Make the banner responsive */
-    max-height: 400px; /* Optional: Limit the height for better aesthetics */
-    object-fit: cover; /* Ensures the image scales nicely */
-    border-bottom: 2px solid #ccc; /* Optional: Add a border below the banner */
 }
