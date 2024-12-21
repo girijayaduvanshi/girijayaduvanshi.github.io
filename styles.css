@@ -232,3 +232,20 @@ figcaption {
         padding: 5px; /* Reduce padding on smaller devices */
     }
 }
+/* Banner Section */
+.banner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #000; /* Optional: Add a background color for contrast */
+}
+
+.banner-image {
+    width: 100%; /* Make the banner responsive */
+    max-height: 400px; /* Optional: Limit the height for better aesthetics */
+    object-fit: cover; /* Ensures the image scales nicely */
+    border-bottom: 2px solid #ccc; /* Optional: Add a border below the banner */
+}
