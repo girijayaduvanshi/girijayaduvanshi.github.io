@@ -1,234 +1,75 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
-}
+// Initialize slide index to default (first slide)
+let slideIndex = 1;
 
-/* Header Section */
-.header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-bottom: 2px solid #ccc;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-}
-
-.header-content h1 {
-    font-size: 2rem;
-    margin-right: 20px;
-}
-
-.profile-photo {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #007BFF;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Contact Details */
-.contact-details {
-    text-align: right;
-    font-size: 0.9rem;
-}
-
-.contact-details p {
-    margin: 5px 0;
-}
-
-/* Navigation Bar */
-.navbar {
-    background-color: #333;
-    padding: 10px 0;
-}
-
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar ul li {
-    margin: 0 15px;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.navbar ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Section Styles */
-.section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 900px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-}
-
-.section h2 {
-    font-size: 1.5rem;
-    color: #444;
-    margin-bottom: 10px;
-}
-
-/* Gallery Section */
-.gallery-container {
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent line breaks */
-    margin: 20px 0;
-    padding: 10px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex; /* Enables scrolling horizontally */
-    gap: 15px; /* Space between items */
-}
-
-figure {
-    display: inline-block;
-    margin: 0;
-    text-align: center;
-}
-
-figcaption {
-    margin-top: 8px;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-/* Gallery Thumbnail */
-.gallery-thumbnail {
-    width: 300px; /* Set thumbnail size */
-    height: 200px; /* Maintain aspect ratio */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.gallery-thumbnail:hover {
-    transform: scale(1.20); /* Zoom on hover */
-}
-
-/* Lightbox */
-.lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox-content {
-    text-align: center;
-    position: relative;
-}
-
-
-.lightbox-slide {
-    display: none;
-    text-align: center;
-}
-
-.lightbox-slide img {
-    max-width: 90%;
-    max-height: 80%;
-    margin-bottom: 30px;
-    border-radius: 8px;
-}
-.lightbox-content p {
-    color: white;
-    font-size: 1.2rem;
-}
-.close {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-    z-index: 1100;
-}
-
-.close:hover {
-    color: #bbb;
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-    transform: translateY(-50%);
-}
-
-.prev {
-    left: 30px;
-}
-
-.next {
-    right: 30px;
-}
-
-.prev:hover, .next:hover {
-    color: #bbb;
-}
-
-/* Footer Section */
-.footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #333;
-    color: white;
-    font-size: 0.9rem;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .contact-details {
-        text-align: left;
-        margin-top: 10px;
-    }
-
-    .gallery-thumbnail {
-        width: 150px; /* Resize images for smaller screens */
-    }
-
-    .gallery-container {
-        padding: 5px; /* Reduce padding on smaller devices */
+// Open the lightbox and display the current slide
+function openLightbox() {
+    const lightbox = document.getElementById("lightbox");
+    if (lightbox) {
+        lightbox.style.display = "block";
+        showSlide(slideIndex);
+    } else {
+        console.error("Lightbox element not found!");
     }
 }
+
+// Close the lightbox
+function closeLightbox() {
+    const lightbox = document.getElementById("lightbox");
+    if (lightbox) {
+        lightbox.style.display = "none";
+    } else {
+        console.error("Lightbox element not found!");
+    }
+}
+
+// Navigate to the next or previous slide
+function changeSlide(n) {
+    showSlide(slideIndex += n);
+}
+
+// Display a specific slide based on its index
+function currentSlide(n) {
+    showSlide(slideIndex = n);
+}
+
+// Core function to display the correct slide
+function showSlide(n) {
+    const slides = document.getElementsByClassName("lightbox-slide");
+
+    if (slides.length === 0) {
+        console.error("No slides found!");
+        return;
+    }
+
+    // Loop to the first slide if index exceeds total slides
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+
+    // Loop to the last slide if index is less than 1
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+
+    // Hide all slides
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    // Display the current slide
+    slides[slideIndex - 1].style.display = "block";
+}
+
+// Optional: Add keyboard navigation support
+document.addEventListener("keydown", function (event) {
+    const lightbox = document.getElementById("lightbox");
+    if (lightbox && lightbox.style.display === "block") {
+        if (event.key === "ArrowRight") {
+            changeSlide(1); // Navigate to next slide
+        } else if (event.key === "ArrowLeft") {
+            changeSlide(-1); // Navigate to previous slide
+        } else if (event.key === "Escape") {
+            closeLightbox(); // Close lightbox
+        }
+    }
+});
