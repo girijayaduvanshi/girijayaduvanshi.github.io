@@ -178,9 +178,9 @@ body {
 }
 
 .section h2 {
-    font-size: 1.2rem;
-    color: #444;
-    margin-bottom: 10px;
+    font-size: 1.0rem;
+    color: red;
+    margin-bottom: 8px;
 }
 
 /* Gallery Section */
