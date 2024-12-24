@@ -167,15 +167,15 @@ body {
 }
 
 .navbar ul li a {
-    color: red; /* Set the color of the navigation links to red */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make the links bold */
+    color: red !important; /* Set the color of the navigation links to red */
+    text-decoration: none !important; /* Remove underline */
+    font-weight: bold !important; /* Make the links bold */
     transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .navbar ul li a:hover {
-    color: darkred; /* Change to a darker shade of red on hover */
-    text-decoration: underline; /* Optionally underline on hover */
+    color: darkred !important; /* Change to a darker shade of red on hover */
+    text-decoration: underline !important; /* Optionally underline on hover */
 }
 
 /* Section Styles */
