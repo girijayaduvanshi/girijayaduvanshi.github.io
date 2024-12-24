@@ -9,13 +9,19 @@ body {
 }
 /* Section Title Styling */
 .section h2 {
-    font-size: 1.0rem;
+    font-size: 1.2rem;
     color: red !important; /* Ensures red color */
     font-weight: bold !important; /* Ensures bold text */
     margin-bottom: 10px;
     text-transform: uppercase; /* Optional: Makes the text uppercase for emphasis */
     border-bottom: 2px solid red; /* Optional: Adds a red underline for style */
     padding-bottom: 5px;
+}
+.section h3 {
+    font-size: 1.0rem; /* Adjust the font size of subheadings */
+    color: #444; /* Set a color for the subheadings */
+    margin-bottom: 5px; /* Reduce the spacing below the subheading */
+    margin-top: 10px; /* Adjust spacing above the subheading */
 }
 
 /* Header Section */
