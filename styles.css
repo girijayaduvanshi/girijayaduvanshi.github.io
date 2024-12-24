@@ -33,7 +33,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: 20px;
     background: url no-repeat center center; /* Ensure the image is correctly referenced */
     background-size: cover; /* Adjusts the background image to cover the entire header area */
     color: white; /* Optional: Ensure text contrasts with the banner image */
