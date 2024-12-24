@@ -7,8 +7,16 @@ body {
     background-color: #f9f9f9;
     color: #333;
 }
-
-
+/* Section Title Styling */
+.section h2 {
+    font-size: 2rem;
+    color: red; /* Red color */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Optional: Makes the text uppercase for emphasis */
+    border-bottom: 2px solid red; /* Optional: Adds a red underline for style */
+    padding-bottom: 5px;
+}
 
 /* Header Section */
 .header {
