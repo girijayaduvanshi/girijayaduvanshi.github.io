@@ -38,7 +38,18 @@ body {
     background-color: #f4f4f4;
     border-bottom: 2px solid #ccc;
 }
-
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: url no-repeat center center; /* Ensure the image is correctly referenced */
+    background-size: cover; /* Adjusts the background image to cover the entire header area */
+    color: white; /* Optional: Ensure text contrasts with the banner image */
+    border: none; /* Removes any border applied to the header */
+    box-shadow: none; /* Removes any shadow if applied */
+}
 .header-content {
     display: flex;
     align-items: center;
