@@ -183,12 +183,6 @@ body {
     border: 1px solid #ddd;
 }
 
-.section h2 {
-    font-size: 1.0rem;
-    color: #444;
-    margin-bottom: 5px;
-}
-
 /* Gallery Section */
 .gallery-container {
     overflow-x: auto; /* Enable horizontal scrolling */
