@@ -20,8 +20,8 @@ body {
 .section h3 {
     font-size: 1.0rem; /* Adjust the font size of subheadings */
     color: #444; /* Set a color for the subheadings */
-    margin-bottom: 1px; /* Reduce the spacing below the subheading */
-    margin-top: 1px; /* Adjust spacing above the subheading */
+    margin-bottom: 0px; /* Reduce the spacing below the subheading */
+    margin-top: 0px; /* Adjust spacing above the subheading */
 }
 
 /* Header Section */
@@ -110,9 +110,9 @@ body {
     height: 200px;
     border-radius: 20%;
     object-fit: cover;
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .profile-info h1 {
