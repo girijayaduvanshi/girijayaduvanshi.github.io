@@ -20,8 +20,8 @@ body {
 .section h3 {
     font-size: 1.0rem; /* Adjust the font size of subheadings */
     color: #444; /* Set a color for the subheadings */
-    margin-bottom: 5px; /* Reduce the spacing below the subheading */
-    margin-top: 10px; /* Adjust spacing above the subheading */
+    margin-bottom: 2px; /* Reduce the spacing below the subheading */
+    margin-top: 2px; /* Adjust spacing above the subheading */
 }
 
 /* Header Section */
