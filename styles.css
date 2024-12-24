@@ -23,6 +23,10 @@ body {
     margin-bottom: 0px; /* Reduce the spacing below the subheading */
     margin-top: 0px; /* Adjust spacing above the subheading */
 }
+.section p {
+    margin-bottom: 8px; /* Reduce spacing between paragraphs */
+    line-height: 1.6; /* Ensure readability */
+}
 
 /* Header Section */
 .header {
