@@ -28,16 +28,7 @@ body {
     line-height: 1.6; /* Ensure readability */
 }
 
-/* Header Section */
-.header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-bottom: 2px solid #ccc;
-}
+
 .header {
     display: flex;
     flex-wrap: wrap;
