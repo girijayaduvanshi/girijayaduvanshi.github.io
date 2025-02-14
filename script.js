@@ -86,29 +86,33 @@ document.querySelectorAll('.blog-title').forEach(title => {
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
     });
 });
+
 // Function to show only the selected section
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll(".section");
     const navLinks = document.querySelectorAll(".navbar a");
 
+    function showSection(sectionId) {
+        sections.forEach(section => {
+            section.style.display = "none"; // Hide all sections
+        });
+
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.style.display = "block"; // Show the selected section
+        }
+    }
+
+    // Ensure navigation works for all links
     navLinks.forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault();
             const targetId = this.getAttribute("href").substring(1);
-
-            // Hide all sections
-            sections.forEach(section => {
-                section.style.display = "none";
-            });
-
-            // Show the selected section
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                targetSection.style.display = "block";
-            }
+            showSection(targetId);
         });
     });
 
-    // Show the "About Me" section by default
-    document.getElementById("about").style.display = "block";
+    // Show "About Me" section by default on page load
+    showSection("about");
 });
+
