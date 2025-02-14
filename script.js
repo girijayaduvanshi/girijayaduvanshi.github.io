@@ -86,17 +86,29 @@ document.querySelectorAll('.blog-title').forEach(title => {
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
     });
 });
+// Function to show only the selected section
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".section");
+    const navLinks = document.querySelectorAll(".navbar a");
 
-// Optional: Add keyboard navigation support
-document.addEventListener("keydown", function (event) {
-    const lightbox = document.getElementById("lightbox");
-    if (lightbox && lightbox.style.display === "block") {
-        if (event.key === "ArrowRight") {
-            changeSlide(1); // Navigate to next slide
-        } else if (event.key === "ArrowLeft") {
-            changeSlide(-1); // Navigate to previous slide
-        } else if (event.key === "Escape") {
-            closeLightbox(); // Close lightbox
-        }
-    }
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+
+            // Hide all sections
+            sections.forEach(section => {
+                section.style.display = "none";
+            });
+
+            // Show the selected section
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.style.display = "block";
+            }
+        });
+    });
+
+    // Show the "About Me" section by default
+    document.getElementById("about").style.display = "block";
 });
