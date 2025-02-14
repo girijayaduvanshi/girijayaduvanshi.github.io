@@ -60,6 +60,33 @@ function showSlide(n) {
     slides[slideIndex - 1].style.display = "block";
 }
 
+// Smooth scrolling for navigation links
+document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+// Enable lightbox for all images inside blog section
+document.querySelectorAll('#blog img').forEach(image => {
+    image.addEventListener('click', function () {
+        openLightbox();
+    });
+});
+
+// Expand/collapse blog posts
+document.querySelectorAll('.blog-title').forEach(title => {
+    title.addEventListener('click', function () {
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+});
+
 // Optional: Add keyboard navigation support
 document.addEventListener("keydown", function (event) {
     const lightbox = document.getElementById("lightbox");
