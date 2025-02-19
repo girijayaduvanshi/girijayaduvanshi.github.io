@@ -72,22 +72,7 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
     });
 });
 
-// Enable lightbox for all images inside blog section
-document.querySelectorAll('#blog img').forEach(image => {
-    image.addEventListener('click', function () {
-        openLightbox();
-    });
-});
-
-// Expand/collapse blog posts
-document.querySelectorAll('.blog-title').forEach(title => {
-    title.addEventListener('click', function () {
-        const content = this.nextElementSibling;
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-    });
-});
-
-// Function to show only the selected section
+// Function to handle navigation and show only the selected section
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll(".section");
     const navLinks = document.querySelectorAll(".navbar a");
@@ -116,3 +101,28 @@ document.addEventListener("DOMContentLoaded", function () {
     showSection("about");
 });
 
+// Enable lightbox for all images inside the blog section
+document.querySelectorAll('#blog img').forEach(image => {
+    image.addEventListener('click', function () {
+        openLightbox();
+    });
+});
+
+// Expand/collapse blog posts
+document.querySelectorAll('.blog-post h3').forEach(title => {
+    title.addEventListener('click', function () {
+        const content = this.nextElementSibling;
+        if (content) {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+    });
+});
+
+// Ensure blog content loads dynamically when clicking on "Read More"
+document.querySelectorAll('.read-more').forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetPostId = this.getAttribute('href').replace('.html', '');
+        showSection(targetPostId);
+    });
+});
